@@ -1,5 +1,7 @@
 import { Component } from '@angular/core';
 import { NavController } from 'ionic-angular';
+import {ConnectionService} from './../../providers/connection-service/connection-service';
+
 
 /*
   Generated class for the GeneratedTestPage page.
@@ -11,5 +13,17 @@ import { NavController } from 'ionic-angular';
   templateUrl: 'build/pages/generated-test/generated-test.html',
 })
 export class GeneratedTestPage {
-  constructor(private nav: NavController) {}
+  constructor(private nav: NavController, private connectionService:ConnectionService ) {}
+
+
+
+buscarCep() : void{
+  this.connectionService.getCep('57073201')
+    .then((res)=>{
+      let json = res.json();
+      console.log(json.localidade); 
+    }).catch((err)=>{
+      console.log(err);
+    })
+}
 }

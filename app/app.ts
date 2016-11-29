@@ -4,6 +4,7 @@ import {StatusBar} from 'ionic-native';
 import {HomePage} from './pages/home/home';
 import {MenuTestPage} from './pages/menu-test/menu-test';
 import {GeneratedTestPage} from './pages/generated-test/generated-test';
+import {ConnectionService} from './providers/connection-service/connection-service';
 
 
 
@@ -36,7 +37,7 @@ export class MyApp {
   }
 }
 
-ionicBootstrap(MyApp, [],{
+ionicBootstrap(MyApp, [ConnectionService],{
 
   menuType: 'push',
     platforms: {
