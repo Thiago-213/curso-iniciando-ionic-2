@@ -2,6 +2,12 @@ import {Component} from '@angular/core';
 import {Platform, ionicBootstrap,MenuController} from 'ionic-angular';
 import {StatusBar} from 'ionic-native';
 import {HomePage} from './pages/home/home';
+import {AlertPage} from './pages/alert/alert';
+import {ButtonTestPage} from './pages/button-test/button-test';
+import {CardTestPage} from './pages/card-test/card-test';
+import {IconTestPage} from './pages/icon-test/icon-test';
+
+
 import {MenuTestPage} from './pages/menu-test/menu-test';
 import {GeneratedTestPage} from './pages/generated-test/generated-test';
 import {ConnectionService} from './providers/connection-service/connection-service';
@@ -20,7 +26,15 @@ export class MyApp {
 
     {component: HomePage, title: 'Home', icon: 'home'},
     {component: MenuTestPage, title: 'Menu Test', icon: 'menu'},
-    {component: GeneratedTestPage, title: 'Generated Page', icon: 'home'}
+    {component: GeneratedTestPage, title: 'Generated Page', icon: 'home'},
+    {component: AlertPage, title: 'Alert', icon: 'alert'},
+    {component: ButtonTestPage, title: 'Button', icon: 'button'},
+    {component: CardTestPage, title: 'Card Test', icon:'card' },
+    {component: IconTestPage, title: 'Icon Test', icon:'' }
+
+
+
+
 
 
   ];
